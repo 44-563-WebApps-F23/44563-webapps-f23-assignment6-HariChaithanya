@@ -87,10 +87,8 @@ function resolveForm (){
 <script>
     function chooseOp() {
         
-         var base = parseFloat(document.getElementById("baseAmount").value);
-        var tip = parseFloat(document.getElementById("tipPercentage").value);
-
-    
+        var base = parseInt(document.getElementById("baseAmount").value);
+        var tip = parseInt(document.getElementById("tipPercentage").value);
         var operation = document.querySelector('input[name="op"]:checked').value;
 
         let result;
@@ -105,8 +103,6 @@ function resolveForm (){
                 result = base * tip;
                 break;
         }
-
-       
         var resultElement = document.getElementById("result1");
         resultElement.innerHTML = `${operation} of ${base} and ${tip} is ${result}`;
     }
