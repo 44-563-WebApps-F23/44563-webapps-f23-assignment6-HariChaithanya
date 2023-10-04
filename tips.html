@@ -68,6 +68,49 @@ function resolveForm (){
             document.getElementById("tipResults").innerHTML = " Tips are :  " + myOutput;
         }
     </script>
+<br>
+
+<form>
+    <label>
+        <input type="radio" name="op" value="sum" onClick="chooseOp()"> Sum
+    </label><br>
+    <label>
+        <input type="radio" name="op" value="difference" onClick="chooseOp()"> Difference
+    </label><br>
+    <label>
+        <input type="radio" name="op" value="product" onClick="chooseOp()"> Product
+    </label><br>
+</form>
+
+<div id="result1"></div>
+
+<script>
+    function chooseOp() {
+        
+         var base = parseFloat(document.getElementById("baseAmount").value);
+        var tip = parseFloat(document.getElementById("tipPercentage").value);
+
+    
+        var operation = document.querySelector('input[name="op"]:checked').value;
+
+        let result;
+        switch (operation) {
+            case "sum":
+                result = base + tip;
+                break;
+            case "difference":
+                result = base - tip;
+                break;
+            case "product":
+                result = base * tip;
+                break;
+        }
+
+       
+        var resultElement = document.getElementById("result1");
+        resultElement.innerHTML = `${operation} of ${base} and ${tip} is ${result}`;
+    }
+</script>
 
 
 </body>
