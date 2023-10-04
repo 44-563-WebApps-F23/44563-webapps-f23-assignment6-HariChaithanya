@@ -18,8 +18,6 @@
 </form>
 
 <br>
-<div id="result">This result will be displayed here </div>
-
 <script> 
 var good = 0;
 var oops=0;
@@ -40,6 +38,37 @@ function checkAuthor (){
     
     
 }
+
+
+</script>
+<div id="result">This result will be displayed here </div>
+
+<br>
+
+
+
+<div id="imageContainer">
+    <img id="cityImage" src="kingston.jpg" width="100" height="100" onclick="selectImage()">
+</div>
+
+<script>
+    var useImage = 1;
+    function selectImage() {
+        switch (useImage) {
+            case 1:
+                document.getElementById("cityImage").src = "orlando.jpg";
+                useImage = 2;
+                break;
+            case 2:
+                document.getElementById("cityImage").src = "taiwan.jpg";
+                useImage = 3;
+                break;
+            case 3:
+                document.getElementById("cityImage").src = "kingston.jpg";
+                useImage = 1;
+                break;
+        }
+    }
 </script>
 
 </body>
