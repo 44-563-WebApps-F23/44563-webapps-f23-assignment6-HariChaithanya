@@ -1,0 +1,21 @@
+colour.css
+img {
+    cursor: pointer;
+}
+
+img:hover {
+   border:4px solid rgb(12, 233, 159); 
+}
+button{
+    cursor:pointer;
+}
+
+button:hover {
+     background-color: rgb(213, 37, 37);
+}
+
+label:hover{
+    color: rgb(54, 176, 14);
+    font-style:bold;
+
+}
